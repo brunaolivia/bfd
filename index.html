@@ -1,38 +1,54 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<DIV class="conteudo">
 <body>
-    <h1> Minha Página Pessoal</h1>
-    <div class="image">
-    <div class="img"><img src="https://www.bing.com/th/id/OIP.NPxIerSzMIAdahm414zpyAHaE8?w=252&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="estudando"></div>
-    <div class="img"><img src="https://tse4.mm.bing.net/th/id/OIP.isHYlvo0CAkL_FlsKmgTNwHaFE?rs=1&pid=ImgDetMain&o=7&rm=3" alt="lendo"></div>
-    </div>
-    <p> Meu nome é ..., tenho ... anos e estou na universidade.Essas são algumas coisas que gosto de fazer no meu tempo livre:</p>
-    <ul>
-        <li> Assistir filmes e séries;</li>
-        <li> Ler livros;</li>
-        <li> Dormir.</li>
-    </ul>
+    <header class="menu-bar">
+        <h2>Portfólio</h2>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#biografia">Biografia</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <section id="biografia" class="biografia">
+            <div class="txt-destaque">
+        <h1> Bruna O.M.</h1>
+        </div>
+        <p> Programadora Front-end iniciante</p>
+        <div class="container">
+            <div>
+            <h2> Sobre mim</h2>
+            <p>Quem sou eu?</p>
+            <p> Meu nome é Bruna, tenho 18 anos e moro em São José de Ribamar, um munícipio localizado no Maranhão. Estudei a vida toda em escola pública e sempre tive afinidade com as matérias de ciências exatas. Por isso, decidi fazer uma graduação em Engenharia Química na UFMA. Além disso, também sou formada em Admnistração pelo IFMA. Atualmente, comecei a engressar no mundo da programação.</p>
+        </div>
+        <img src="https://i.pinimg.com/736x/34/e6/ca/34e6caa11e82b467927591f71096323c.jpg" alt="think">
+        </div>
+        </section>
+
+        <section id="contato" class="contato-form">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo:</p>
+            <form id="contato-form">
+                <input id="input-nome" type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Sua mensagem"></textarea>
+                <button id="btn-enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+        </section>
+
+        <footer></footer>
+        <script src="script.js"></script>
 </body>
-   <a href="https://mangaplus.shueisha.co.jp/manga_list/ongoing"> Se distraia um pouco</a>
-   <div class="container">
-   <div><button onclick=" alert('Hello!!!!!!')">Clique aqui</button></div>
-   <div><button>Próxima página</button></div>
-   </div>
-</DIV>
-<style>
-    .image{
-        display:flex;
-        justify-content: space-around;
-    }
-    .img{
-        width: 50%;
-        border-radius: 10px;
-    }
-    .container{
-        display:flex;
-        justify-content:space-between;
-    }
-</style>
+</html>
+
