@@ -1,0 +1,42 @@
+.tabela-livros{
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    align-items: center;
+    font-family:'Times New Roman';
+
+}
+.tabela-livros th{
+    background-color: #a17ad4;
+    font-weight: bold;
+    color:#ffffff;
+}
+.tabela-livros th, .tabela-livros td{
+    border: 1px solid #9ea0a3;
+    padding: 8px;
+    text-align: left;
+}
+.tabela-livros tr:nth-child(even){
+    background-color: #cde4f7;
+}
+.tabela-livros tr:hover{
+    background-color: #a9c8f7;
+}
+.tabela-livros button{
+    background-color: #a261ce;
+    color: #092053;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    &:disabled{
+        background-color: #d2c6ff;
+        color:#ffffff;
+        cursor: not-allowed;
+    }
+   
+}
