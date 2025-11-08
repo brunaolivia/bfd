@@ -1,54 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <title>Simple lading page</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
     <header class="menu-bar">
-        <h2>Portfólio</h2>
+        <div>
+        <h2>Controle de Estoque</h2>
+        </div>
         <nav class="menu">
             <ul>
                 <li>
-                    <a href="#biografia">Biografia</a>
+                    <a>Cadastro</a>
                 </li>
                 <li>
-                    <a href="#contato">Contato</a>
+                    <a>Login</a>
                 </li>
             </ul>
         </nav>
     </header>
-        <section id="biografia" class="biografia">
-            <div class="txt-destaque">
-        <h1> Bruna O.M.</h1>
-        </div>
-        <p> Programadora Front-end iniciante</p>
-        <div class="container">
-            <div>
-            <h2> Sobre mim</h2>
-            <p>Quem sou eu?</p>
-            <p> Meu nome é Bruna, tenho 18 anos e moro em São José de Ribamar, um munícipio localizado no Maranhão. Estudei a vida toda em escola pública e sempre tive afinidade com as matérias de ciências exatas. Por isso, decidi fazer uma graduação em Engenharia Química na UFMA. Além disso, também sou formada em Admnistração pelo IFMA. Atualmente, comecei a engressar no mundo da programação.</p>
-        </div>
-        <img src="https://i.pinimg.com/736x/34/e6/ca/34e6caa11e82b467927591f71096323c.jpg" alt="think">
-        </div>
-        </section>
+  <body>
+    <div class="container">
+        <div class="content">
+            <div class="square twitch" style="margin-bottom: 50px;">
+                <span class="one" ></span>
+                <span class="two"></span>
+                <span class="three"></span>
+                <div class="circle">
+                    <h2 class="DrugRadar"> DrugRadar </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing el</p>
+                </div>
+            </div>
 
-        <section id="contato" class="contato-form">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo:</p>
-            <form id="contato-form">
-                <input id="input-nome" type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Sua mensagem"></textarea>
-                <button id="btn-enviar" type="submit">Enviar</button>
-            </form>
+            <a href="{{route('dashboard.index')}}" class="button" target="_parent">
+                    <span class="actual-text">&nbsp;Estoque&nbsp;</span>
+                    <span class="hover-text" aria-hidden="true">&nbsp;Estoque&nbsp;</span>
+            </a>
         </div>
-        </section>
-
-        <footer></footer>
-        <script src="script.js"></script>
-</body>
+    </div>
+    
+  </body>
+  
 </html>
-
