@@ -1,13 +1,195 @@
-body{
-    margin:0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
-    background-color: white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background:  linear-gradient(178.6deg, #F26716 11.8%, #F2B90C 83.8%);
+}
+
+.content{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1{
+    font-size: 45px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.content p{
+    font-size: 16px;
+    color: #fff;
+}
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: #ffffff99;
+  --animation-color:#F26716;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+
+/*  */
+
+.square {
+position: relative;
+margin: 0 10px;
+width: 400px; height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.square .one {
+position: absolute;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+transition: 0.5s;
+animation: animate 6s linear infinite;
+
+}
+
+.twitch:hover .one {
+border: none;
+background:#F26716;
+}
+
+.square .two {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+transition: 0.5s;
+animation: animate 6s linear infinite;
+}
+
+.twitch:hover .two {
+border: none;
+background: #F2B90C;
+
+}
+
+
+
+
+.square .three {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
+transition: 0.5s;
+animation: animate2 10s linear infinite;
+}
+.twitch:hover .three {
+border: none;
+background:#000000;
+}
+
+.circle {
+position: relative;
+padding: 40px 60px;
+text-align: center;
+transition: 0.5s;
+z-index: 1000;
+}
+
+.square:hover{
+color: white;
+}
+
+.content:hover {
+
+color: #ffffff;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.DrugRadar{
+    font-size: 50px;
 }
 .menu-bar{
     display:flex;
     justify-content: space-between;
-    padding: 5px 20px;
-    background: linear-gradient(45deg, #bfa5f4 0%, #5d4097 100%);
+    padding: 20px 20px;
+    background:#000000;
     align-items: center;
     & h2{
         color: white;
@@ -15,99 +197,27 @@ body{
 }
 .menu{
     justify-content: space-around;
+    
     & ul{
         list-style: none;
         display: flex;
         gap: 20px;
+       
         & a{
             text-decoration: none;
             color:white;
             font-size: 16px;
             font-weight: bold;
-            border:solid 2px #6f50ad;
+            border:solid 2px  #F2B90C;
             padding:10px;
             border-radius: 30px;
-            box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-            transition: all 0.4s ease;
+            box-shadow: 1px 2px 10px rgba(247, 246, 246, 0.616);
+            transition: all 0.3s ease;
             &:hover {
-                color:#6f50ad ;
+                color:  #F26716 ;
                 background-color: white;
-                box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+                box-shadow: 1px 2px 10px rgba(248, 244, 244, 0.555);
                }
             }
         }
     }
-    .biografia{
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px;
-        & h1{
-            color:#6f50ad;
-            font-size: 40px;
-            margin-bottom: 0;
-             }
-        & p{
-        color:#09090a;
-        }
-    }
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-       & h2 {
-        text-align: start;
-        padding: 5px 50px;
-        color: #2c0b7a;
-       }
-      & p{
-        padding: 5px 50px;
-        text-align: justify;
-      }
-      & img{
-        height: 15vw;
-        border-radius: 50%;
-        box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-      }
-    }
-.txt-destaque h1{
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-.txt-destaque h1:hover{
-    transform: scale(1.0) translateY(-5px);
-    color:#6390d4;
-}
-.contato-form{
-    margin: 50px auto;
-    padding: 20px;
-    border: solid 1px #6f50ad;
-    width: 60%;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-    margin-bottom: 100px;
-
-    & form{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 70%;
-        justify-content: center;
-        margin: 10px auto;
-
-        & input{
-            padding: 10px;
-            border: solid 1px #6f50ad;
-            border-radius: 10px;
-        }
-    }
-}
-button {
-            border: solid 1px #6f50ad;
-            background-color: #6f50ad;
-            border-radius:10px;
-            color:white;
-            font-weight: bold;
-            padding:5px;
-            }
-
